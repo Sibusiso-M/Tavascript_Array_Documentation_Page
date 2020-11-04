@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>JavaScript Arrays Documentation</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <nav id="navbar">
+        <header id="navbar-header">JavaScript Arrays Documentation</header>
+        <ul>
+            <li>
+                <a class="nav-link" href="#Introduction">Introduction</a>
+            </li>
+            <li>
+                <a class="nav-link" href="#What_is_an_Array?">What is an Array?</a>
+            </li>
+            <li>
+                <a class="nav-link" href="#Creating_an_Array">Creating an Array</a>
+            </li>
+            <li>
+                <a class="nav-link" href="#Using_the_JavaScript_Keyword_new">Using the JavaScript Keyword new</a>
+            </li>
+            <li>
+                <a class="nav-link" href="#Access_the_Elements_of_an_Array">Access the Elements of an Array</a>
+            </li>
+            <li>
+                <a class="nav-link" href="#Changing_an_Array_Element">Changing an Array Element</a>
+            </li>
+            <li>
+                <a class="nav-link" href="#Access_the_Full_Array">Access the Full Array</a>
+            </li>
+            <li>
+                <a class="nav-link" href="#Arrays_are_Objects">Arrays are Objects</a>
+            </li>
+            <li>
+                <a class="nav-link" href="#Array_Elements_can_be_Objects">Array Elements can be Objects</a>
+            </li>
+            <li>
+                <a class="nav-link" href="#Array_Properties_and_Methods">Array Properties and Methods</a>
+            </li>
+            <li>
+                <a class="nav-link" href="#The_length_Property">The length Property</a>
+            </li>
+            <li>
+                <a class="nav-link" href="#Accessing_the_First_Array_Element">Accessing the First Array Element</a>
+            </li>
+            <li>
+                <a class="nav-link" href="#Accessing_the_Last_Array_Element">Accessing the Last Array Element</a>
+            </li>
+            <li>
+                <a class="nav-link" href="#Looping_Array_Elements">Looping Array Elements</a>
+            </li>
+            <li>
+                <a class="nav-link" href="#Adding_Array_Elements">Adding Array Elements</a>
+            </li>
+            <li>
+                <a class="nav-link" href="#Associative_Arrays">Associative Arrays</a>
+            </li>
+            <li>
+                <a class="nav-link" href="#The_Difference_Between_Arrays_and_Objects">The Difference Between Arrays and
+                    Objects</a>
+            </li>
+            <li>
+                <a class="nav-link" href="#When_to_use_Arrays._When_to_use_Objects.">When to use Arrays. When to use
+                    Objects.</a>
+            </li>
+            <li>
+                <a class="nav-link" href="#How_to_Recognize_an_Array">How to Recognize an Array</a>
+            </li>
+            <li>
+                <a class="nav-link" href="#Avoid_new_Array()">Avoid new Array()</a>
+            </li>
+
+            <li>
+                <a class="nav-link" href="#Reference">Reference</a>
+            </li>
+        </ul>
+    </nav>
+
+    <main id="main-doc">
+
+        <section id="Introduction" class="main-section">
+            <header>
+                Introduction
+            </header>
+            <p>
+                JavaScript arrays are used to store multiple values in a single variable.
+            </p>
+            <code>
+                var cars = ["Saab", "Volvo", "BMW"];
+            </code>
+        </section>
+
+        <section id="What_is_an_Array?" class="main-section">
+            <header>
+                What is an Array?
+            </header>
+            <p>
+                An array is a special variable, which can hold more than one value at a time.
+                <br><br> If you have a list of items (a list of car names, for example), storing the cars in single variables could look like this:
+            </p>
+            <code>
+                var car1 = "Saab";
+               <br> var car2 = "Volvo";
+               <br> var car3 = "BMW";
+            </code>
+            <p>
+                However, what if you want to loop through the cars and find a specific one?<br> <br>And what if you had not 3 cars, but 300?<br> <br> <b>The solution is an array! </b><br> An array can hold many values under a single name, and you can
+                access the values by referring to an index number.
+            </p>
+        </section>
+
+        <section id="Creating_an_Array" class="main-section">
+            <header>
+                Creating an Array
+            </header>
+            <p>
+                Using an array literal is the easiest way to create a JavaScript Array.
+            </p>
+            <p>
+                Syntax:
+            </p>
+            <div class="syntax">
+                var array_name = [item1, item2, ...];
+            </div>
+            <p>Example:</p>
+            <code>
+                var cars = ["Saab", "Volvo", "BMW"];
+            </code>
+            <p>
+                Spaces and line breaks are not important. A declaration can span multiple lines
+            </p>
+
+        </section>
+
+        <section id="Using_the_JavaScript_Keyword_new" class="main-section">
+            <header>
+                Using the JavaScript Keyword new
+            </header>
+            <p>
+                The following example also creates an Array, and assigns values to it:
+            </p>
+            <p>Example:</p>
+            <code>
+                var cars = new Array("Saab", "Volvo", "BMW");
+            </code>
+            <p>
+                The two examples above do exactly the same. There is no need to use new Array(). <br><br> For simplicity, readability and execution speed, use the first one (the array literal method).
+            </p>
+        </section>
+
+        <section id="Access_the_Elements_of_an_Array" class="main-section">
+            <header>
+                Access the Elements of an Array
+            </header>
+            <p>
+                You access an array element by referring to the <b>index number.</b> This statement accesses the value of the first element in cars:</p>
+
+            <div class="syntax">
+                var name = cars[0];
+            </div>
+            <p>Example</p>
+            <code>
+                var cars = ["Saab", "Volvo", "BMW"];
+<br> document.getElementById("demo").innerHTML = cars[0];
+            </code>
+            <p>
+                <b>Note:</b> Array indexes start with 0. [0] is the first element. [1] is the second element.
+            </p>
+        </section>
+
+        <section id="Changing_an_Array_Element" class="main-section">
+            <header>
+                Changing an Array Element
+            </header>
+            <p>
+                This statement changes the value of the first element in cars:
+            </p>
+            <div class="syntax">
+                cars[0] = "Opel";
+            </div>
+
+            <p>Example:</p>
+            <code>
+                var cars = ["Saab", "Volvo", "BMW"];
+ <br> cars[0] = "Opel";
+ <br>
+document.getElementById("demo").innerHTML = cars[0];
+            </code>
+        </section>
+
+        <section id="Access_the_Full_Array" class="main-section">
+            <header>
+                Access the Full Array
+            </header>
+            <p>
+                With JavaScript, the full array can be accessed by referring to the array name:
+            </p>
+            <p>Example:</p>
+            <code>
+                var cars = ["Saab", "Volvo", "BMW"];
+                document.getElementById("demo").innerHTML = cars; 
+            </code>
+        </section>
+
+        <section id="Arrays_are_Objects" class="main-section">
+            <header>
+                Arrays are Objects
+            </header>
+            <p>
+                Arrays are a special type of objects. <br> The typeof operator in JavaScript returns "object" for arrays.
+                <br> But, JavaScript arrays are best described as arrays. Arrays use numbers to access its "elements".
+                <br> <br> In this example, person[0] returns John:
+            </p>
+            <p>Array:</p>
+            <code>
+                var person = ["John", "Doe", 46];
+            </code>
+            <p>
+                Objects use names to access its "members". <br><br> In this example, person.firstName returns John:
+            </p>
+            <p>Object:</p>
+            <code>
+                var person = {firstName:"John", lastName:"Doe", age:46};
+                </code>
+        </section>
+
+        <section id="Array_Elements_can_be_Objects" class="main-section">
+            <header>
+                Array Elements can be Objects
+            </header>
+            <p>
+                JavaScript variables can be objects. <br> Arrays are special kinds of objects. <br> Because of this, you can have variables of different types in the same Array. <br> You can have objects in an Array. You can have functions in an Array.
+                <br> You can have arrays in an Array:
+            </p>
+            <div class="syntax">
+                myArray[0] = Date.now; <br> myArray[1] = myFunction; <br> myArray[2] = myCars;
+            </div>
+            <p>
+            </p>
+        </section>
+
+        <section id="Array_Properties_and_Methods" class="main-section">
+            <header>
+                Array Properties and Methods
+            </header>
+            <p>
+                The real strength of JavaScript arrays are the built-in array properties and methods:
+            </p>
+            <p>Example:</p>
+            <code>
+                var x = cars.length;   // The length property returns the number of elements
+              <br>  var y = cars.sort();   // The sort() method sorts arrays
+            </code>
+            <p>
+                Array methods are covered in the next chapters.
+            </p>
+        </section>
+
+        <section id="The_length_Property" class="main-section">
+            <header>
+                The length Property
+            </header>
+            <p>
+                The length property of an array returns the length of an array (the number of array elements).
+            </p>
+            <p>Example:</p>
+            <code>
+                var fruits = ["Banana", "Orange", "Apple", "Mango"];
+               <br> fruits.length;   // the length of fruits is 4        
+                </code>
+
+            <p>The length property is always one more than the highest array index.</p>
+        </section>
+
+        <section id="Accessing_the_First_Array_Element" class="main-section">
+            <header>
+                Accessing the First Array Element
+            </header>
+            <p>Example:</p>
+            <code>
+                fruits = ["Banana", "Orange", "Apple", "Mango"];
+ <br>               var first = fruits[0];
+             </code>
+        </section>
+
+        <section id="Accessing_the_Last_Array_Element" class="main-section">
+            <header>
+                Accessing the Last Array Element
+            </header>
+            <p>Example:</p>
+            <code>
+                fruits = ["Banana", "Orange", "Apple", "Mango"];
+               <br> var last = fruits[fruits.length - 1];
+             </code>
+        </section>
+
+        <section id="Looping_Array_Elements" class="main-section">
+            <header>
+                Looping Array Elements
+            </header>
+            <p>
+                The safest way to loop through an array, is using a for loop:
+            </p>
+            <p>Example:</p>
+            <code>
+                var fruits, text, fLen, i;
+                <br>
+                fruits = ["Banana", "Orange", "Apple", "Mango"];
+                <br> fLen = fruits.length;
+                <br>
+                text = "&lt;ul&gt;";
+              <br>
+              <br>
+                  for (i = 0; i &lt; fLen; i++) {
+                      <br>
+                  text += "&lt;li&gt;" + fruits[i] + "&lt;/li&gt;";
+     <br> }
+     <br> text += "&lt;/ul&gt;";
+            </code>
+            <p>
+                You can also use the Array.forEach() function:
+            </p>
+            <p>Example:</p>
+            <code>
+                var fruits, text;
+                fruits = ["Banana", "Orange", "Apple", "Mango"];
+                <br>
+                text = "&lt;ul&gt;";
+               <br>
+                fruits.forEach(myFunction);
+               <br>
+                text += "&lt;/ul&gt;";
+               <br> 
+                function myFunction(value) {
+                <br>  text += "&lt;li&gt;" + value +"&lt;/li&gt;";
+            <br>    
+            }
+             </code>
+        </section>
+
+        <section id="Adding_Array_Elements" class="main-section">
+            <header>
+                Adding Array Elements
+            </header>
+            <p>
+                The easiest way to add a new element to an array is using the push() method:
+            </p>
+            <p>Example:</p>
+            <code>
+                var fruits = ["Banana", "Orange", "Apple", "Mango"];
+              <br>  fruits.push("Lemon");    // adds a new element (Lemon) to fruits
+             </code>
+            <p>New element can also be added to an array using the length property:
+            </p>
+            <p>Example:</p>
+            <code>
+                var fruits = ["Banana", "Orange", "Apple", "Mango"];
+              <br>  fruits[fruits.length] = "Lemon";    // adds a new element (Lemon) to fruits
+             </code>
+
+            <p>WARNING ! <br> Adding elements with high indexes can create undefined "holes" in an array:</p>
+
+            <p>Example:</p>
+            <code>
+                var fruits = ["Banana", "Orange", "Apple", "Mango"];
+              <br>  fruits[6] = "Lemon";    // adds a new element (Lemon) to fruits
+             </code>
+        </section>
+
+        <section id="Associative_Arrays" class="main-section">
+            <header>
+                Associative Arrays
+            </header>
+            <p>
+                Many programming languages support arrays with named indexes. Arrays with named indexes are called associative arrays (or hashes). JavaScript does not support arrays with named indexes. In JavaScript, arrays always use numbered indexes.
+            </p>
+            <p>Example:</p>
+            <code>
+                var person = [];
+    <br>  person[0] = "John";
+    <br>  person[1] = "Doe";
+    <br>  person[2] = 46;
+    <br>  var x = person.length;     // person.length will return 3
+    <br>        var y = person[0];         // person[0] will return "John"
+             </code>
+            <p>
+                WARNING !! <br><br> If you use named indexes, JavaScript will redefine the array to a standard object. After that, some array methods and properties will produce incorrect results.
+            </p>
+            <p>Example:</p>
+            <code>
+                var person = [];
+            <br>    person["firstName"] = "John";
+            <br>    person["lastName"] = "Doe";
+            <br>    person["age"] = 46;
+            <br>    var x = person.length;     // person.length will return 0
+            <br>    var y = person[0];         // person[0] will return undefined
+             </code>
+        </section>
+
+        <section id="The_Difference_Between_Arrays_and_Objects" class="main-section">
+            <header>
+                The Difference Between Arrays and Objects
+            </header>
+            <p>
+                <ul>
+                    <li>In JavaScript, arrays use numbered indexes.</li>
+                    <li>In JavaScript, objects use named indexes.</li>
+                </ul>
+            </p>
+
+            <p>Arrays are a special kind of objects, with numbered indexes.</p>
+
+        </section>
+
+        <section id="When_to_use_Arrays._When_to_use_Objects." class="main-section">
+            <header>
+                When to use Arrays. When to use Objects.
+            </header>
+            <ul>
+                <li>JavaScript does not support associative arrays.</li>
+                <li>You should use objects when you want the element names to be strings (text).
+                </li>
+                <li>You should use arrays when you want the element names to be numbers.</li>
+            </ul>
+        </section>
+
+        <section id="Avoid_new_Array()" class="main-section">
+            <header>
+                Avoid new Array()
+            </header>
+            <p>
+                There is no need to use the JavaScript's built-in array constructor new Array().
+                <br>
+            </p>
+
+            <p>These two different statements both create a new empty array named points:</p>
+            <code>
+                var points = new Array();     // Bad
+              <br>  var points = [];              // Good 
+            </code>
+            <p>
+                These two different statements both create a new array containing 6 numbers:
+            </p>
+
+            <code>
+                var points = new Array(40, 100, 1, 5, 25, 10); // Bad
+               <br>
+                var points = [40, 100, 1, 5, 25, 10];          // Good
+            </code>
+            <p>
+                The new keyword only complicates the code. It can also produce some unexpected results:
+            </p>
+            <code>
+                var points = new Array(40, 100);  // Creates an array with two elements (40 and 100)
+            </code>
+
+            <p>
+                What if I remove one of the elements?
+            </p>
+
+            <code>
+                var points = new Array(40);  // Creates an array with 40 undefined elements !!!!!
+            </code>
+        </section>
+        <section id="How_to_Recognize_an_Array" class="main-section">
+            <header>
+                How to Recognize an Array
+            </header>
+            <p>
+                A common question is: How do I know if a variable is an array? The problem is that the JavaScript operator typeof returns "object":
+            </p>
+            <code>
+                var fruits = ["Banana", "Orange", "Apple", "Mango"];
+<br>
+                typeof fruits;    // returns object
+            </code>
+            <p>
+                The typeof operator returns object because a JavaScript array is an object.
+            </p>
+
+            <h3>
+                Solution 1:
+            </h3>
+
+            <p>
+                To solve this problem ECMAScript 5 defines a new method Array.isArray():
+            </p>
+            <code>
+                Array.isArray(fruits);   // returns true
+            </code>
+
+            <h3>
+                Solution 2:
+            </h3>
+            <p>
+                To solve this problem you can create your own isArray() function:
+            </p>
+            <code>
+                function isArray(x) {
+                    <br>
+                    return x.constructor.toString().indexOf("Array") > -1;
+                <br>  }           
+            </code>
+            <p>The function above always returns true if the argument is an array. Or more precisely: it returns true if the object prototype contains the word "Array".</p>
+            <h3>
+                Solution 3:
+            </h3>
+
+            <p>
+                The instanceof operator returns true if an object is created by a given constructor: </p>
+            <code>
+                var fruits = ["Banana", "Orange", "Apple", "Mango"];
+<br>
+                fruits instanceof Array;   // returns true
+            </code>
+        </section>
+
+        <section id="Reference" class="main-section">
+            <header>
+                Reference
+            </header>
+            <ul>
+                <li>All the documentation in this page is taken from
+                    <a href="https://www.w3schools.com/js/js_arrays.asp" target="_blank">w3schools</a>
+                </li>
+            </ul>
+        </section>
+    </main>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</body>
+
+</html>
